@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "967032527572",
+    "firebase_url": "https://project-uas-f9f7a.firebaseio.com",
+    "project_id": "project-uas-f9f7a",
+    "storage_bucket": "project-uas-f9f7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967032527572:android:bfdefb23c6a898fe983941",
+        "android_client_info": {
+          "package_name": "com.example.uas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967032527572-dshhg5t1suc41k0rh52rpqdva9v3dtel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTFZU9770kLeVxL-3WeWjr4f9WXTb44Vs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967032527572-dshhg5t1suc41k0rh52rpqdva9v3dtel.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

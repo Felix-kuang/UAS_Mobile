@@ -21,6 +21,7 @@ class _ChatScreenState extends State<ChatScreen> {
   final auth = FirebaseAuth.instance;
   final firestoreInstance = FirebaseFirestore.instance;
   var picture = noPic;
+  var _controller = TextEditingController();
 
   void getLoggedIn() {
     final user = auth.currentUser;
@@ -64,7 +65,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         return Center(child: CircularProgressIndicator());
                       } else {
                         return ListView(
-                            children: snapshot.data.docs.map((e){
+                            children: snapshot.data.docs.map((e) {
                           return Center(
                               child: Container(
                             decoration: BoxDecoration(
@@ -159,11 +160,13 @@ class _ChatScreenState extends State<ChatScreen> {
                 Container(
                   margin: const EdgeInsets.only(top: 5.0),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: Colors.white,),
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.white,
+                  ),
                   child: Card(
                     child: ListTile(
                         title: TextField(
+                          controller:  _controller,
                           onChanged: (value) {
                             pesan = value;
                           },
@@ -172,6 +175,7 @@ class _ChatScreenState extends State<ChatScreen> {
                             icon: Icon(Icons.send),
                             onPressed: () async {
                               //code here
+                              _controller.clear();
                               await firestoreInstance
                                   .collection("Pesan")
                                   .doc()
